@@ -5,6 +5,8 @@ import streamlit as st
 from snowflake.snowpark.functions import ai_complete
 import json
 
+st.title(":material/smart_toy: Hello, Cortex!")
+
 # Connect to Snowflake
 try:
     # Works in Streamlit in Snowflake
@@ -13,7 +15,7 @@ try:
 except:
     # Works locally and on Streamlit Community Cloud
     from snowflake.snowpark import Session
-    session = Session.builder.configs(st.secrets["connections"]["snowflake"]).create()
+    session = Session.builder.configs(st.secrets["connections"]["snowflake"]).create() 
 
 # Model and prompt
 model = "claude-3-5-sonnet"
