@@ -31,3 +31,7 @@ if st.button("Generate Response"):
     response_raw = df.collect()[0][0]
     response = json.loads(response_raw)
     st.write(response)
+
+# Footer
+st.divider()
+st.caption("Day 2: Hello, Cortex! | 30 Days of AI")
